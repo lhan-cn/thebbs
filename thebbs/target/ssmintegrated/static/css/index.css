@@ -1,0 +1,102 @@
+div{ 
+white-space:nowrap; 
+} 
+
+.top{
+	position: absolute;
+	width: 1860px;
+	height: 55px;
+	background-color:#696969;
+}
+.top a{
+	//设置链接无下划线
+	text-decoration: none;
+	font-size: 24px;
+	color: white;
+}
+
+.top_left{
+	width: 30%;
+	float: left;
+}
+
+.top_left ul li{
+	margin-left: 180px;
+	padding-left: 10px;
+}
+
+
+.top_center{
+	width: 30%;
+	padding-left: 200px;
+	float: left;
+	
+}
+.form-group{
+	float:left;
+	padding-top: 4px;
+	padding-left: 300px;
+}
+
+.sub_btn{
+	float: left;
+	padding-top: 4px;
+	padding-left: 5px;
+}
+
+.top_right{
+	width: 40%;
+	padding-left: 300px;
+	float: right;
+}
+
+.top_right ul li{
+	padding-right: 100px;
+}
+
+.center{
+	position: absolute;
+	margin-top: 55px;
+	width: 1300px;
+	margin-left: 250px;
+	
+}
+.center_left{
+	position: relative;
+	float: left;
+	width: 900px;
+	height: 900px;
+}
+
+.center-topic{
+	width: 900px;
+	height: 38px;
+}
+
+.center-topic ol li{
+	font-size: 16px;
+	
+}
+.center_right{
+	position: relative;
+	float:left;
+	width: 400px;
+	height: 900px;
+	border: 1px solid indianred;
+}
+
+.head_img{
+	width:  150px;
+	height: 150px;
+	margin-top: 100px;
+	margin-left: 125px;
+	background-color:#31B0D5;
+}
+
+.personal_information{
+	margin-top: 0px;
+	font-size: 20px;
+	text-align: center;
+}
+
+

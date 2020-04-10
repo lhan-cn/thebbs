@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--用户表映射文件-->
+<mapper namespace="com.bbs.dao.UserDao">
+    <resultMap id="find" type="com.bbs.bean.User">
+        <result property="username" column="user_name"/>
+        <result property="userpassword" column="user_password"/>
+        <result property="useremail" column="user_email"/>
+        <result property="phone" column="user_phone"/>
+        <result property="age" column="user_age"/>
+        <result property="usergender" column="user_gender"/>
+        <result property="userimg" column="user_img"/>
+    </resultMap>
+
+    <!--查询用户-->
+    <select id="findUser" resultType="com.bbs.bean.User" resultMap="find">
+        select * from user
+    </select>
+    <!--用户注册-->
+    <insert id="insert"  parameterType="com.bbs.bean.User">
+        insert into user(user_name, user_password,user_email,user_age,user_phone,user_gender)
+        values(#{username},#{userpassword},#{useremail},#{age},#{phone},#{usergender})
+    </insert>
+    <!--判断用户是否重名-->
+    <select id="findUserName" resultType="java.lang.Integer"  parameterType="com.bbs.bean.User">
+        select count(1) as cont from user where #{username}= user_name ;
+    </select>
+
+</mapper>

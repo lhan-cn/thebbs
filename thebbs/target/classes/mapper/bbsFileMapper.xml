@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--论坛表映射文件-->
+<mapper namespace="com.bbs.dao.BbsFileDao">
+    <resultMap id="find" type="com.bbs.bean.BbsFile">
+        <result property="bbsid" column="bbs_id"/>
+        <result property="bbsname" column="bbs_name"/>
+        <result property="bbscontent" column="bbs_content"/>
+        <result property="bbsrecord" column="bbs_record"/>
+    </resultMap>
+
+    <!--查询论坛内容-->
+    <select id="findBbsFile" resultType="com.bbs.bean.BbsFile" resultMap="find">
+        select * from bbs_file
+    </select>
+    <!--用户发表论坛内容-->
+    <insert id="insert"  parameterType="com.bbs.bean.BbsFile">
+        insert into bbs_file(bbs_name, bbs_content,bbs_record)
+        values(#{bbsname},#{bbscontent},#{bbsrecord})
+    </insert>
+
+</mapper>
